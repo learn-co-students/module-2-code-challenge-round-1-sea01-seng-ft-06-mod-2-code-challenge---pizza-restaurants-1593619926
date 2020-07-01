@@ -1,0 +1,11 @@
+<h1> Create Your Own! </h1>
+<%= form_for @pizza do |f| %>
+<% if @pizza.errors.any? %>
+<%= @pizza.errors.full_messages %><br>
+<% end %>
+Name: <%= f.text_field :name %>
+Ingredients: <%= f.text_field :ingredients %>
+<%# Existing Restaurnt  <%= collection_select():restaurant_id, Restaurant.all, :id, :name) %>
+  <%= button_to "Save Pizza", { :action => "new" }, :method => :get %>
+
+<% end %>
