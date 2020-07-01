@@ -1,0 +1,5 @@
+<h1> <%= @restaurants.name %> </h1>
+<h2> <%= @restaurants.address %></h2>
+<p> <%= @restaurants.pizzas.find do |p| %>
+    <%= p.name %>
+    <% end %>

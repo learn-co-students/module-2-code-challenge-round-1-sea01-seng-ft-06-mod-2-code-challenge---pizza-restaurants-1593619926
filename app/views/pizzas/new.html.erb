@@ -1,0 +1,5 @@
+<%=  form_for @pizzas do |p| %>
+   name: <%= p.text_field :name %>
+   ingredients: <%= p.text_field :ingredients %>
+   submit: <%= p.submit  %>
+<% end %>
