@@ -1,0 +1,9 @@
+<%= form_for @restaurant do |f|%>
+  Name:<%= f.collection_select :restaurant_pizza_ids, Restaurant.all, :id, :name%>
+  Address:<%= f.collection_select :restaurant_pizza_ids, Restaurant.all, :id, :address%>
+  <h5>Pizzas:</h5>
+  <%= f.collection_check_boxes :restaurant_pizza_ids, Pizza.all, :id, :name%>
+  <%= f.submit%>
+
+
+<%end%>

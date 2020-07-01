@@ -1,0 +1,9 @@
+<h3>Create a new Pizza:<h3>
+  <%= form_for @pizza do |f|%>
+    <p>Pizza Name: <%= f.text_field :name%></p>
+    <p>Pizza Ingredients: <%= f.text_field :ingredients%></p>
+    <p>Restaurant: <%= f.collection_select :restaurant_ids, Restaurant.all, :id, :name%></p>
+    <%= f.submit %>
+  <%end%>
+
+  <h4><%= flash[:message] %></h4>
