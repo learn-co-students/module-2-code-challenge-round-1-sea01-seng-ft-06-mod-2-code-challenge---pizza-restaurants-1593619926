@@ -1,0 +1,7 @@
+<%= flash[:message] %>
+<%= form_for(@pizza) do |f| %>
+    Pizza Name: <%= f.text_field :name  %><br>
+    Pizza Ingredients: <%= f.text_field :ingredients  %><br>
+    Restaurant: <%= f.collection_select(:restaurant_ids, Restaurant.all, :id, :name)  %><br>
+    <%= f.submit  %>
+<% end %>
